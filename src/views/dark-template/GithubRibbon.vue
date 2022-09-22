@@ -28,13 +28,6 @@
   </a>
 </template>
 
-<script>
-export default {
-  name: 'GithubRibbon',
-  data: () => ({ url: 'https://github.com/AmirrezaNasiri/vue-modern-resume' }),
-}
-</script>
-
 <style scoped>
     .github-corner:hover .octo-arm{
         animation:octocat-wave 560ms ease-in-out

@@ -6,18 +6,13 @@
     <v-card-text>
       <avatar />
       <div class="text-sm-center mb-4 mt-3">
-        <h1>
-          Amirreza <span class="light-blue--text text--lighten-3">Nasiri</span>
-        </h1>
-        <span>
-          A challenge-loving web developer
-        </span>
+        <h1>Anna-Maria <span class="light-blue--text text--lighten-3">Meer</span></h1>
+        <span />
       </div>
 
       <sidebar-section :options="sections.info" />
-      <sidebar-section :options="sections.socials" />
       <sidebar-section :options="sections.hobbies">
-        <template v-slot:item="{item}">
+        <template v-slot:item="{ item }">
           <v-chip>
             <v-avatar>
               <v-icon>
@@ -28,16 +23,15 @@
           </v-chip>
         </template>
       </sidebar-section>
+      <sidebar-section :options="sections.other_activities" />
       <sidebar-section :options="sections.languages">
-        <template v-slot:items="{items}">
+        <template v-slot:items="{ items }">
           <v-container pa-0>
             <v-layout
               wrap
               class="text-xs-center"
             >
-              <template
-                v-for="(item, i) in items"
-              >
+              <template v-for="(item, i) in items">
                 <v-flex
                   :key="i"
                   md3
@@ -79,118 +73,79 @@ export default {
             {
               name: 'Email',
               icon: 'mdi-email',
-              text: 'hi@amirreza.in',
+              text: 'anna@meer-mg.de',
             },
             {
-              name: 'Website',
-              icon: 'mdi-web',
-              text: 'amirreza.in',
-            },
-            {
-              name: 'Birth Date',
+              name: 'Geburtsdatum',
               icon: 'mdi-cake-variant',
-              text: 'Dec 7, 1996',
+              text: 'May 02, 1993',
             },
             {
               name: 'Habitation',
               icon: 'mdi-map-marker',
-              text: 'Tabriz, Iran',
-            },
-          ],
-        },
-        socials: {
-          title: 'SOCIALS',
-          items: [
-            {
-              icon: 'mdi-github-circle',
-              text: 'github.com/AmirrezaNasiri',
-              link: 'https://github.com/AmirrezaNasiri',
-            },
-            {
-              icon: 'mdi-linkedin-box',
-              text: 'linkedin.com/in/amirreza-nasiri',
-              link: 'https://linkedin.com/in/amirreza-nasiri',
-            },
-            {
-              icon: 'mdi-twitter',
-              text: 'twitter.com/Amirreza_Nasiri',
-              link: 'https://twitter.com/Amirreza_Nasiri',
-            },
-            {
-              icon: 'mdi-instagram',
-              text: 'instagram.com/amirreza.n96',
-              link: 'https://instagram.com/amirreza.n96',
+              text: 'Mönchengladbach, Deutschland',
             },
           ],
         },
         hobbies: {
           title: 'HOBBIES',
           items: [
-
             {
-              icon: 'mdi-bullseye',
-              text: 'Getting out of Safe Zone',
+              icon: 'mdi-violin',
+              text: 'Viola, piano & orchestra',
+            },
+            {
+              icon: 'mdi-pencil',
+              text: 'Drawing',
             },
             {
               icon: 'mdi-biohazard',
               text: 'Challenges',
             },
             {
-              icon: 'mdi-bike',
-              text: 'Cycling',
-            },
-            {
-              icon: 'mdi-image-filter-hdr',
-              text: 'Nature',
-            },
-            {
               icon: 'mdi-auto-fix',
-              text: 'Hacking Stuffs',
+              text: 'Hackathons',
             },
             {
-              icon: 'mdi-teach',
-              text: 'Teaching',
+              icon: 'mdi-walk',
+              text: 'Running',
             },
             {
-              icon: 'mdi-karate',
-              text: 'Sports',
+              icon: 'mdi-human-female-dance',
+              text: 'Dancing',
             },
             {
-              icon: 'mdi-music',
-              text: 'Music',
+              icon: 'mdi-swim',
+              text: 'Swimming',
             },
             {
-              icon: 'mdi-account-group',
-              text: 'Leadership',
+              icon: 'mdi-earth',
+              text: 'Travel',
             },
-            {
-              icon: 'mdi-book-open-page-variant',
-              text: 'Books',
-            },
-            {
-              icon: 'mdi-android-debug-bridge',
-              text: 'Tickling Bugs!',
-            },
+          ],
+        },
+        other_activities: {
+          title: 'OTHERS ACTIVITIES',
+          items: [
+            { text: ' - Role-model for young women at an expo of the "SMILE" project of the German Research Center for Artificial Intelligence' },
+            { text: ' - Violist in multiple youth orchestras (Tonhalle Düsseldorf, state youth ensemble for new music,...)' },
+            { text: ' - Volunteering as a swimming teacher for the German Life Saving Association' },
           ],
         },
         languages: {
           title: 'LANGUAGES',
           items: [
             {
+              text : 'Deutsch',
+              value: 100,
+            },
+            {
               text : 'English',
-              value: 70,
+              value: 90,
             },
             {
-              text : 'Turkish',
-              value: 45,
-            },
-            {
-              text : 'Azeri',
-              value: 100,
-            },
-            {
-              text : 'Persian',
-              value: 100,
+              text : 'Korean',
+              value: 30,
             },
           ],
         },
@@ -201,7 +156,7 @@ export default {
 </script>
 
 <style scoped>
-.sidebar{
-    background: #2e2e2e;
+.sidebar {
+  background: #2e2e2e;
 }
 </style>
