@@ -123,7 +123,7 @@ export default {
         html : `
           <p>
           Teaching assistant in the seminar "Exploring Virtual Reality technologies for documentary films", VR workshop 
-          at international bremer symposium on films <a html ="https://www.uni-bremen.de/fileadmin/user_upload/fachbereiche/fb9/film/Filmymposium/2018_-_Grenzen/Symp2018_Programmheft_web_1_.pdf">(Click here for Details)</a>
+          at international bremer symposium on films 
           </p>
         `,
         icon: 'mdi-filmstrip',
